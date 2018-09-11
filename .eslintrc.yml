@@ -1,0 +1,46 @@
+env:
+  browser: true
+  es6: true
+  node: true
+plugins: 
+  - node
+extends:
+  - 'eslint:recommended'
+  - 'google'
+  - 'plugin:node/recommended'
+parserOptions:
+  sourceType: script
+
+# google-styleになくて必要と思われるもの(もしくはあるけどルール変えたいもの)
+rules:
+  # googleだと80. 少なすぎるので120にします
+  max-len:
+    - error
+    - 120
+  # lambdaなのでconsoleは使うよ
+  no-console:
+    - off
+  # インデント幅チェックは必要でしょ
+  indent:
+    - error
+    - 2
+  # = の評価は厳密に3つの=を使おう
+  eqeqeq:
+    - error
+
+  # 以降はnode用設定
+  node/exports-style:
+    - warn
+    - exports
+  node/no-unsupported-features:
+    - error
+    - version: 6
+      ignores:
+        # because using object.entries module
+        - Object.entries
+  node/no-unpublished-require:
+    - off
+  node/no-missing-require:
+    - error
+    - allowModules:
+        - aws-sdk

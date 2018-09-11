@@ -1,0 +1,21 @@
+{
+  "name": "stnsBackend",
+  "description": "stns backend",
+  "private": "true",
+  "scripts": {
+    "lint": "eslint . --ext .js",
+    "gulp": "gulp"
+  },
+  "devDependencies": {
+    "eslint": "^5.5.0",
+    "eslint-config-google": "^0.10.0",
+    "eslint-plugin-node": "^7.0.1",
+    "gulp": "^3.9.1",
+    "gulp-install": "^1.1.0",
+    "gulp-zip": "^4.1.0",
+    "node-aws-lambda": "^0.1.8",
+    "aws-sdk": "2.312.0",
+    "run-sequence": "^2.2.1"
+  },
+  "dependencies": {}
+}

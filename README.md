@@ -1,2 +1,4 @@
 # stns-backend
-stnsバックエンドにAPI GW+Lambda+DynamoDBを使うサンプルコード
+
+STNSバックエンド処理を担うLambda(Node.js)のコード
+
